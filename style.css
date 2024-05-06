@@ -1,0 +1,23 @@
+/* *{
+    box-sizing: border-box;
+} */
+header{
+    position:fixed;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* z-index: 100;
+    width: 100%;
+    top: 0;
+    left: 0; */
+    background-color: #fff;
+}
+.section {
+    padding: 100px  0;
+    
+    
+}
+
+/* .navbar {
+    margin-bottom: 20px;
+} */
