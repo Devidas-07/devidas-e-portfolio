@@ -1,0 +1,56 @@
+:root{
+  --bg:#fff;
+  --text:#212529;
+  --muted:#6c757d;
+}
+
+:root.dark{
+  --bg:#0b1220;
+  --text:#e6eef8;
+  --muted:#9aa6b2;
+}
+
+html,body,#root{height:100%;}
+body{background:var(--bg); color:var(--text); transition:background .2s ease, color .2s ease; padding-top:4.5rem}
+
+.section{padding:4rem 0}
+
+.navbar .nav-link{margin-right:.5rem}
+
+/* tweak card backgrounds in dark mode */
+.dark .card{background:#0f1724; color:var(--text)}
+.dark .bg-light{background:#0f1724 !important}
+.dark .bg-white{background:transparent}
+
+/* small responsive tweaks */
+@media (max-width: 767px){
+  .navbar-brand{font-size:1rem}
+}
+
+/* Skills UI enhancements */
+.skill-card{border:0}
+.skill-icon{font-size:1.1rem; width:28px; text-align:center}
+.skill-name{display:inline-block}
+.skill-row{transition:transform .12s ease, background .12s ease; padding:4px}
+.skill-row:hover{transform:translateY(-3px); background:rgba(0,0,0,0.03); border-radius:6px}
+
+.dark .skill-row:hover{background:rgba(255,255,255,0.03)}
+.dark .skill-card{background:#071120; color:var(--text)}
+.dark .progress{background:#0b1220}
+.dark .progress-bar{background:#0ea5a4}
+
+/* Education timeline */
+.timeline{max-width:720px}
+.timeline::before{content:''; position:absolute; left:18px; top:0; bottom:0; width:3px; background:linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.06)); border-radius:2px}
+.timeline-item{position:relative; padding-left:48px; margin-bottom:1.25rem}
+.timeline-marker{position:absolute; left:9px; top:12px}
+.marker{display:inline-block; width:18px; height:18px; background:var(--bg); border:3px solid #d1d5db; border-radius:50%; box-shadow:0 1px 2px rgba(0,0,0,0.05)}
+.marker-current{background:var(--bg); border-color:#0d6efd}
+
+.timeline-content .card{border:0}
+
+/* Dark mode timeline tweaks */
+.dark .timeline::before{background:linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02))}
+.dark .marker{background:var(--bg); border-color:#2b3440}
+.dark .marker-current{border-color:#0ea5a4}
+.dark .timeline-content .card{background:#071120}
